@@ -24,6 +24,16 @@
         </li>
       </ul>
     </div>
+    <div>
+      <input type="text" v-model="input_val">
+    </div>
+    <div>
+      Input Value: <span v-text="input_val"></span>
+    </div>
+    <hr />
+    <div>
+      <button class="btn btn-primary" v-on:click="counter++">You've clicked this button {{counter}} times!</button>
+    </div>
   </div>
 </template>
 
@@ -38,6 +48,8 @@ export default {
         { firstname: 'John', lastname: 'Porter' },
       ],
       msg: 'Well OK!',
+      input_val: '',
+      counter: 0,
     };
   },
 };
